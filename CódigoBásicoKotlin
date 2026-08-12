@@ -1,0 +1,109 @@
+    fun main() {
+        
+    var a: Int = 5
+    var b: Int = 2
+    var resultadoSuma: Int = 0
+    var resultadoResta: Int = 0
+    var resultadoMulti: Int = 0
+    var resultadoDivi: Int = 0
+
+    ***//Condición:***
+    var edad: Int = 14
+    
+   resultadoSuma = a + b
+    
+   println("Resultado Suma: " + resultadoSuma)
+   
+   resultadoResta = a - b
+    
+   println("Resultado Resta: " + resultadoResta)
+    
+   resultadoMulti = a * b
+    
+   println("Resultado Multiplicación: " + resultadoMulti)
+    
+   resultadoDivi = a.toFloat() / b
+   
+   println("Resultado División: " + resultadoDivi)
+
+
+  ***//Condición if/else*** 
+   if(edad >= 18){
+       println("\nEres mayor de edad")
+   }
+   else{
+       println("\nEres menor de edad")
+   }
+   
+  
+  ***//Ciclo For***
+   
+   for(i in 15..22){
+       println(i)
+   }
+
+    ***//Ciclo While***
+   
+   var i: Int = 1
+    
+   while(i <= 10)
+   {
+       println(i)
+       
+       i++ // Tiene que estar es una línea sola
+   }
+
+***Funciones en Kotlin:***
+
+   fun sum(a: Int, b: Int): Int{
+       return a + b
+   }
+   
+   println("Resltado Suma: " + sum(5, 5))
+   
+   fun res(a: Int, b: Int): Int{
+       return a - b
+   }
+   
+   println("Resltado Resta: " + res(5, 5))
+   
+   fun mul(a: Int, b: Int): Int{
+       return a * b
+   }
+   
+   println("Resltado Multiplicación: " + mul(5, 5))
+   
+   fun div(a: Int, b: Int): Float{
+       return a.toFloat() / b
+   }
+   
+   println("Resltado División: " + div(2, 5))
+ }
+
+
+***Función de Orden Superior:*** 
+
+	fun sumar(primer_numero: Int, segundo_numero: Int) = primer_numero + segundo_numero // Funcion de una sola expresión
+  fun restar(primer_numero: Int, segundo_numero: Int) = primer_numero - segundo_numero
+  fun multiplicar(primer_numero: Int, segundo_numero: Int) = primer_numero * segundo_numero
+    
+  fun operacion(primer_numero: Int, segundo_numero:Int, funcion: (Int, Int) -> Int): Int{
+        //tengo un primer_numero, segundo_numero y función
+        return funcion(primer_numero, segundo_numero)
+    }
+    
+    
+    var a = 3
+    var b = 4
+
+    //println(sumar(a, b))
+    
+    //println(restar(a, b))
+    
+    //println(multiplicar(a, b))
+    
+    println(operacion(a, b, ::multiplicar))
+    
+    //Los "::" sirven como el operador de referencia. Se usan para apuntar a una función, 
+    //a una propiedad o a un constructor sin ejecutarlos de inmediato, permitiendo tratarlos como valores u objetos
+
