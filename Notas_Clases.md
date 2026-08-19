@@ -79,6 +79,22 @@ println(sum) // 21
 val n = numeros.find{it % 2 == 0}
 println(n)//2
 
+- ***Opciones Avanzadas:***
+  
+- Agrupacion: Puedes agrupar elementos de una colección basandote en un criterio.
+
+  val numeros = listOf(1, 2, 3, 4, 5, 6, 6, 6, 5, 3)
+  val grupoPares = numeros.groupBy{it % 2 == 0}
+  println("gruposPares: " + grupoPares)
+  
+- Ordenación: Las colecciones se pueden ordenar utilizando sortedBy o sortedDescending
+  
+  val numeros 		= listOf(1, 2, 3, 4, 5, 6, 6, 6, 5, 3)
+  val ordenAscenso = numeros.sorted() // Ascenso
+  val ordenDescenso = numeros.sortedDescending() // Descenso
+  println("ordenAscenso: " + ordenAscenso)
+  println("ordenDescenso: " + ordenDescenso)
+
 ***Compilador de java gratuito: https://onecompiler.com/java***
 
 ***Compilador de Kotlin gratuito: https://play.kotlinlang.org/***
