@@ -56,3 +56,50 @@ fun main() {
 }
 
 }
+
+fun main() {
+    
+    //primer ejercicio: 
+    
+	val calificaciones = listOf(7, 4, 8, 10, 2, 5, 3)
+    val aprobados = calificaciones.filter{it >= 4}
+    val sumatoria = aprobados.reduce{acc, calificaciones -> acc + calificaciones}
+    val total = aprobados.count()
+    val promedio = sumatoria / total
+    
+   
+    println("Aprobados: " + aprobados)
+    println("Sumatoria: $sumatoria")
+    println("Promedio de notas: " + promedio.toFloat() + "\n")
+    
+    
+    //segundo ejercicio:
+    
+    val lista = listOf("Juan", "Pedro", "Diego")
+    val mapa = mapOf("Manzanas" to 100, "Naranjas" to 80)
+    var contador = 1
+    
+    for(i in lista){
+        println("Empleado n°$contador: " + i)
+        contador ++
+    }
+    
+    println("-====================-")
+    for(i in mapa){
+        println("$i")
+    }
+    
+    //Tercer ejercicio:
+    
+    val licencias = listOf(5, 11, 3, 15, 2, 5, 6)
+    val mayor_numero = 
+    val menor_numero = 
+    val empleados = licencias.filter{it > 10}
+ 
+    println("\nPromedio de dias de licencia: " + "%.2f".format(licencias.average()))
+    println("Cantidad de empleados con más de 10 días: " + empleados.count())
+  
+    
+    
+
+}
