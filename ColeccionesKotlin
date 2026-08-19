@@ -1,0 +1,58 @@
+//Colecciones:
+
+fun main() {
+    val numeros 		= listOf(1, 2, 3, 4, 5, 6)
+    val pares 			= numeros.filter {it % 2 == 0}
+    val impares 		= numeros.filter {it % 2 != 0}
+    val mayores 		= numeros.filter {it >= 5}
+    val doble			= numeros.map{it * 2}
+    val siguiente 		= numeros.map {it + 1}
+    val sumatoria 		= numeros.reduce {acc, numero -> acc + numero}
+    val primer_par 		= numeros.find {it % 2 == 0}
+    val primer_impar 	= numeros.find {it % 2 != 0}
+    val primero 		= numeros.first()
+    val ultimo 			= numeros.last()
+    
+    println("Numeros: " + numeros)
+    println("pares: " + pares)
+    println("impares: " + impares)
+    println("mayores: " + mayores)
+    println("doble: " + doble)
+    println("siguiente: " + siguiente)
+    println("sumatoria: $sumatoria")
+    println("primer par: $primer_par")
+    println("primer impar: $primer_impar")
+    println("primero: $primero")
+    println("ultimo: $ultimo")
+}
+
+//Ciclo for con lista en Kotlin: 
+fun main() {
+    val numeros 		= listOf(1, 2, 3, 4, 5, 6, 6, 6, 5, 3)
+    
+    for(i in numeros){
+        
+        if(i>=5){
+        	println("Grande: " + i)    
+        }
+        else{
+            println("Pequeño: " + i)
+        }
+        
+    }
+}
+//
+fun main() {
+    val numeros 		= listOf(1, 2, 3, 4, 5, 6, 6, 6, 5, 3)
+    
+    for(i in numeros){
+        
+        if(i % 2 == 0){
+        	println("Par: " + i)    
+        }
+        else{
+            println("impar: " + i)
+        }
+}
+
+}
