@@ -79,7 +79,7 @@ println(sum) // 21
 val n = numeros.find{it % 2 == 0}
 println(n)//2
 
-- ***Opciones Avanzadas:***
+- **Opciones Avanzadas:**
   
 - Agrupacion: Puedes agrupar elementos de una colección basandote en un criterio.
 
@@ -94,6 +94,28 @@ println(n)//2
   val ordenDescenso = numeros.sortedDescending() // Descenso
   println("ordenAscenso: " + ordenAscenso)
   println("ordenDescenso: " + ordenDescenso)
+
+
+  - Kotlin como lenguaje:
+
+  Objeto -> Clase -> Parámetros(Atributos) y funciones(Acciones)
+
+  **4 principios de desarrollo orientado a objetos:**
+
+  - Herencia: las clases hijas heredan las funciones de la clase padre.
+  - Abstracción: simplificar las características de la clase.
+  - Encapsulamiento: Ocultar los datos de la clase.
+  - Polimorfismo: Dos objetos pueden tener la misma funcón pero se comportan de forma distinta.
+ 
+- **Constructor**: pide los parametros(atributos) para crear una instacia de una clase.
+
+**SOLID**: es un grupo de cinco reglas de diseño para la Programación Orientada a Objetos. Ayudan a crear código limpio, fácil de leer, cambiar y ampliar sin romper otras partes del programa.
+  
+- S (Responsabilidad Única): Una clase hace una sola tarea y tiene una sola razón para cambiar.
+- O (Abierto/Cerrado): El código acepta nuevas funciones sin modificar lo que ya funciona.
+- L (Sustitución de Liskov): Las clases hijas reemplazan a las clases padres sin causar fallos.
+- I (Segregación de Interfaces): Es mejor tener varias interfaces pequeñas que una sola muy grande y pesada.
+- D (Inversión de Dependencias): Los módulos dependen de abstracciones y no de detalles concretos
 
 ***Compilador de java gratuito: https://onecompiler.com/java***
 
