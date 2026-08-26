@@ -117,7 +117,11 @@ println(n)//2
 - I (Segregación de Interfaces): Es mejor tener varias interfaces pequeñas que una sola muy grande y pesada.
 - D (Inversión de Dependencias): Los módulos dependen de abstracciones y no de detalles concretos
 
+- Corrutinas: Son la forma idiomática de Kotlin para manejar tareas asíncronicas. Piensa en ellas como hilos súper ligeros.
+  
+- Apply: para configurar o inicializar un objeto, permitiendo modificar sus propiedades y luego devolver el mismo objeto ya modificado.
 
+- Let: sirve para ejecutar un bloque de código sobre un objeto de manera segura y ordenada, usando it para referirse a él y devolviendo el resultado de la última línea.
 
 ***Compilador de java gratuito: https://onecompiler.com/java***
 
