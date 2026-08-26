@@ -98,7 +98,7 @@ println(n)//2
 
   - Kotlin como lenguaje:
 
-  Objeto -> Clase -> Parámetros(Atributos) y funciones(Acciones)
+  Objeto -> Instancia de Clase -> Parámetros(Atributos) y funciones(Acciones)
 
   **4 principios de desarrollo orientado a objetos:**
 
@@ -116,6 +116,8 @@ println(n)//2
 - L (Sustitución de Liskov): Las clases hijas reemplazan a las clases padres sin causar fallos.
 - I (Segregación de Interfaces): Es mejor tener varias interfaces pequeñas que una sola muy grande y pesada.
 - D (Inversión de Dependencias): Los módulos dependen de abstracciones y no de detalles concretos
+
+
 
 ***Compilador de java gratuito: https://onecompiler.com/java***
 
