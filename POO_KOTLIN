@@ -1,0 +1,75 @@
+open class Animal(var nombre: String,var edad: Int,var peso: Double){
+    fun info(){
+         println("El animal se llama $nombre, tiene $edad años y pesa $peso kg")
+     }
+     
+     open fun ruido(){
+         println("$nombre hace un ruido genérico")
+     }//Cuando un método está en el concepto de polimorfismo pasa a ser "Open"
+}//Clase padre siempre tiene que tener "Open"
+
+class Gato(nombre: String, edad: Int, peso: Double, var vidas: Int):Animal(nombre, edad, peso){
+    override fun ruido(){
+         println("El gato $nombre hace MIAU")
+     }//el metodo pasa a ser override(sobre escrito).
+    fun romperSofa(){
+        println("$nombre está rompiendo el sofa")
+    }    
+}//Clase hija Gato
+
+class Perro(nombre: String, edad: Int, peso: Double, var labor: String):Animal(nombre, edad, peso){
+    override fun ruido(){
+         println("El perro $nombre hace GUAU")
+     } 
+    fun jugar(){
+        println("$nombre está jugando")
+    }
+}//Clase hija Perro
+
+fun main() { 
+    val spike = Perro("Spike", 4, 7.5, "Compañia")
+    val michi = Gato("Michi", 2, 2.5, 7)
+    
+    spike.ruido()
+    michi.ruido()
+    
+    spike.jugar()
+    michi.romperSofa()   
+
+}
+
+//ACTIVIDAD
+open class bebida_alcoholica(var nombre: String, var grado: Double, var precio: Int){
+    
+    fun info(){
+        println("El $nombre tiene $grado% grados de alcohol y un precio de $$precio pesos")
+    }
+    
+    open fun celebracion(){
+        println("VIVAAAA!!")
+    }    
+}
+
+class Ron(nombre: String, grado: Double, precio: Int, var tipo_maleza: String):bebida_alcoholica(nombre, grado, precio){
+    override fun celebracion(){
+        println("PERO POR QUÉ RON!!!")
+    }
+}
+
+class Tequila(nombre: String, grado: Double, precio: Int, var tipo_agave: String):bebida_alcoholica(nombre, grado, precio){
+    override fun celebracion(){
+        println("TEQUILAAAA!!!")
+    }
+}
+fun main() {
+  
+    val ron = Ron("Havana Club", 37.5, 12000, "Caña de Azúcar")
+    val tequila = Tequila("Don Julio", 38.5, 50000, "Agave Azúl Wever")
+    
+    ron.info()
+    
+    tequila.info()
+    
+    ron.celebracion()
+    tequila.celebracion()        
+}
